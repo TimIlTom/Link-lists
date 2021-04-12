@@ -22,15 +22,10 @@ let addNewListElement = function(event){
 
 let createNewLink = function(links){
 
-  links.forEach(link => {
-
-    const aElem = $("<a>").attr("href",link.url).text(link.title);
+    const aElem = $("<a>").attr("href",links[links.length - 1].url).text(links[links.length - 1].title);
 
     const listElement = $("<li>").append(aElem);
     $("#list").append(listElement);
-  });
-
-  
 }
 
 let init = function(){
